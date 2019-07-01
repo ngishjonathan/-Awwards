@@ -1,20 +1,24 @@
-# Awwards
-This is a Project rating App 
+## AWWARDS
+This is an app showing different projects where other users can post and rate the projects
 
-## Project Description
-Users can register a new account, log in to it, upload new projects and rate/review existing projects. User should view all projects and user profiles.
+## Author
+ANDREW MWANGI
 
-## Application
-![Screenshot from 2019-05-30 10-57-25](https://user-images.githubusercontent.com/47333363/58617975-1d69fa00-82ca-11e9-8cc1-fa99a56f6f5d.png)
+## Project Setup instructions
+Use the following commands to use this project.
 
-## Posted-Apps
-![Screenshot from 2019-05-30 15-25-15](https://user-images.githubusercontent.com/47333363/58632813-6d0eec80-82ef-11e9-97b5-706734eeedc7.png)
+git clone https://github.com/ngishjonathan/awwards.git install python 3.6 Install Postgresql cd Gallery Navigate to the virtual environment using source virtual/bin/activate atom . //For those using atom text editor. code . //For those using Visual Studio editor. Run python3.6 manage.py runserver
+
+## specifications
+User loads homepage	Different projects will be displayed
+
+When you search an item on search bar	Results will be displayed if present and an error message will be displayed if not present Click on an image	A pop up will appear showing the description, name and location of the image
 
 
 ## Setup/Installation Requirements
 * Internet connection.
 * Python 3, Django installation.
-* Clone it using git clone https://github.com/EmmaKibore/awwards.git
+* Clone it using git clone https://github.com/ngishjonathan/awwards.git
 * Install Requirements using pip install -r requirements.txt
 * To start python3.6 manage.py runserver
 * Go to you browser and write localhost:8000 or 127.0.0.1:8000
@@ -40,7 +44,7 @@ This App is made with:
 * html
 
 ## Support and contact details
-Incase of any issues or concerns, please contact through email at emmaKibore@gmail.com or mobile 0702499205.
+Incase of any issues or concerns, please contact through email at balozimwash@gmail.com or mobile 0702499***.
 
 ## License & Copyright
-This project is licensed under the MIT license.Copyright (c) 2019 Emma Kibore
+This project is licensed under the MIT license.Copyright (c) 2019 Andrew mwangi
