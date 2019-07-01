@@ -1,0 +1,178 @@
+{%extends 'base.html'%}
+{%load bootstrap4%}
+{%block content%}
+
+<main>
+    <div class="container-fluid">
+        <!--Carousel Wrapper-->
+        <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+            <!--Indicators-->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-2" data-slide-to="0"></li>
+                <li data-target="#carousel-example-2" data-slide-to="1"></li>
+                <li data-target="#carousel-example-2" data-slide-to="2" class="active"></li>
+            </ol>
+            <!--/.Indicators-->
+            <!--Slides-->
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <div class="view">
+                        <img style="height: 550px;" class="d-block w-100"
+                         src="http://2.bp.blogspot.com/-tZgzh_hv6tM/T8xAdXBO-VI/AAAAAAAAAUI/j7V_EXjGyw4/s1600/nature+wallpaper+(6).jpg"
+                            alt="First slide">  
+                        <div class="mask rgba-black-strong"></div>
+                    </div>
+                    <div class="carousel-caption">
+                        <h1 style="font-size: 80px;" class="page-title">
+                            Project Rating Features
+                        </h1>
+
+                        <div class="circles">
+                            <div class="first circle">
+                                <strong></strong>
+                                <span>DESIGN</span>
+                            </div>
+
+                            <div class="second circle">
+                                <strong></strong>
+                                <span>USABILITY</span>
+                            </div>
+
+                            <div class="third circle">
+                                <strong></strong>
+                                <span>CONTENT</span>
+                            </div>
+
+                            <div class="fourth circle">
+                                <strong></strong>
+
+                                <span>OVERALL</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <!--Mask color-->
+                    <!-- <div class="view">
+                        <img style="height: 500px;" class="d-block w-100"
+                            src="https://ak9.picdn.net/shutterstock/videos/10368959/thumb/1.jpg" alt="Second slide">
+                        <div class="mask rgba-black-strong"></div>
+                    </div> -->
+                    <div class="carousel-caption">
+                        <h1 style="font-size: 80px;" class="page-title">
+                            Project Rating Features
+                        </h1>
+
+
+                        <div class="circles">
+                            <div class="first circle">
+                                <strong></strong>
+
+                                <span>DESIGN</span>
+                            </div>
+
+                            <div class="second circle">
+                                <strong></strong>
+
+                                <span>USABILITY</span>
+                            </div>
+
+                            <div class="third circle">
+                                <strong></strong>
+
+                                <span>CONTENT</span>
+                            </div>
+
+                            <div class="fourth circle">
+                                <strong></strong>
+
+                                <span>OVERALL</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <!--Mask color-->
+                    <div class="view">
+                        <img style="height: 550px;" class="d-block w-100"
+                            src="https://images.pexels.com/photos/326058/pexels-photo-326058.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                            alt="Third slide">
+                        <div class="mask rgba-black-strong"></div>
+                    </div>
+                    <div class="carousel-caption">
+                        <h1 style="color: black; font-size: 80px;" class="page-title">
+                            Project Rating Features
+                        </h1>
+
+                        <div style="color: black;" class="circles">
+                            <div class="first circle">
+                                <strong></strong>
+
+                                <span>DESIGN</span>
+                            </div>
+
+                            <div class="second circle">
+                                <strong></strong>
+
+                                <span>USABILITY</span>
+                            </div>
+
+                            <div class="third circle">
+                                <strong></strong>
+
+                                <span>CONTENT</span>
+                            </div>
+
+                            <div class="fourth circle">
+                                <strong></strong>
+
+                                <span>OVERALL</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/.Slides-->
+            <!--Controls-->
+        </div>
+        <div class="container-fluid con">
+            <div class="gallery row" style='margin-top: 2%'>
+                {% if projects %}
+                {% for project in projects %}
+
+                <div class="col-md-6" style="width: 100%;">
+                    <img width="500px" height="300px" class="card-header" src="{{project.image.url}}" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">{{project.title}}</h5>
+                      <p class="Description">
+                        {{project.description}}
+                    </p>
+                   <p><a><img src="http://clipart-library.com/img1/1483955.png" width="90"></a></p>
+                      <a href="{{project.link}}" class="btn btn-primary">Tour Project</a>
+                    </div>
+                  </div>
+
+                
+
+                
+
+                {% endfor %}
+
+            </div>
+           {% else %}
+            <div class="alert">
+                <h2 class="alert alert-info animated fadeIn"> The awards for design, creativity and innovation on the
+                    Internet
+                </h2>
+            </div>
+            {% endif %}
+        </div>
+
+</main> 
+
+{%endblock%}
