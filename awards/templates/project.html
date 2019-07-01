@@ -1,0 +1,54 @@
+{%extends 'base.html'%}
+
+<body>
+
+ {% block content %}
+
+ <div class="container">
+
+  <div style="color: white;" class="row" style="margin-top:150px;margin-bottom:150px;">
+    <div class="col-md-3"></div>
+     <div class="col-md-3">
+       <img style='height:200px;width:200px;margin:3%;border-radius:100%;' src="{{ user.profile.prof_pic.url }}" alt="">
+     </div>
+     <div class="col-md-2">
+       <h3>{{user}}</h3>
+       <p>{{user.profile.bio}}</p>
+       <p>{{user.profile.contact}}</p>
+     </div>
+     <div class="col-md-1">
+       <a href="{% url 'new_prof' %}">
+         <input type="submit" class="btn btn-primary btn-sm" value="Edit Profile" style="margin-top:150px;">
+       </a>
+     </div>
+     <div class="col-md-3"></div>
+  </div>
+
+  <div class="row"style='margin:2%;'>
+    <a href="{%url 'new_project'%}">
+     <input type="submit" class="btn btn-primary btn-sm" value="Add a New Project">
+    </a>
+  </div>
+
+  <div class="row">
+    {% for project in projects %}
+      <div class="" style='float:left;height:200;width:300;margin:3%;'>
+        <h3> {{ project.title }} </h3>
+        <img src="{{project.image.url}}" alt="Project Pic">
+        <p>Posted <strong>{{project.pub_date|timesince}}</strong> ago</p>
+        <p>by <strong>{{project.profile.user}}</strong></p>
+        <a href="{%url 'delete' project.id %}" class="btn btn-sucess btn-sm">
+          <i class="glyphicon glyphicon-trash" style="width:80px;font-size:30px;"></i>
+        </a>
+        <a href="{%url 'new_review' %}"class="btn btn-default btn-sm" id="like">
+          <i class="glyphicon glyphicon-pencil" style="width:80px;font-size:30px;">Rate</i>
+        </a>
+
+      </div>
+    {%endfor%}
+   </div>
+ </div>
+ 
+
+ {% endblock %}
+</body>

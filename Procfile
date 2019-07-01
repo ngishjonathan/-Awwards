@@ -1,0 +1,1 @@
+web: gunicorn ards.wsgi --log-file -
